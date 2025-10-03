@@ -1,0 +1,255 @@
+﻿0x00(12, 0)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+If_FlagCheck()
+{
+	GotoLabel(1, 244)
+}
+LoadScript(10, 2, 15)
+StopScript()
+SetLabel(1, 244)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 4)
+If_FlagCheck()
+{
+	GotoLabel(1, 245)
+}
+LoadScript(10, 4, 15)
+StopScript()
+SetLabel(1, 245)
+ScreenFade(FADE_OUT, COL_BLACK_SPECIAL, 1)
+ChangeUi(UI_BG_MOVIE, 1)
+ChangeUi(UI_TEXTBOX_ONLY, 0)
+ChangeUi(UI_INVESTIGATE, 0)
+SetGameState(2, 0, 0, 100)
+SetGameState(3, 0, 0, 100)
+ChangeUi(UI_BG_BLACK, 0)
+LoadMap(15, 0, 255)
+ChangeUi(UI_BUSTUP, 0)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 0)
+If_FlagCheck()
+{
+	GotoLabel(1, 246)
+}
+Music(3, 100, 0)
+SetLabel(1, 246)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 1)
+If_FlagCheck()
+{
+	GotoLabel(1, 247)
+}
+Music(3, 100, 0)
+SetLabel(1, 247)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+If_FlagCheck()
+{
+	GotoLabel(1, 248)
+}
+Music(3, 100, 0)
+SetLabel(1, 248)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 3)
+If_FlagCheck()
+{
+	GotoLabel(1, 249)
+}
+Music(3, 100, 0)
+SetLabel(1, 249)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 4)
+If_FlagCheck()
+{
+	GotoLabel(1, 250)
+}
+Music(32, 100, 0)
+SetLabel(1, 250)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 5)
+If_FlagCheck()
+{
+	GotoLabel(1, 251)
+}
+Music(14, 100, 0)
+SetLabel(1, 251)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, AND)
+If_FlagCheck()
+{
+	GotoLabel(1, 252)
+}
+Music(14, 100, 0)
+SetLabel(1, 252)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, OR)
+If_FlagCheck()
+{
+	GotoLabel(1, 253)
+}
+Music(14, 100, 0)
+SetLabel(1, 253)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 8)
+If_FlagCheck()
+{
+	GotoLabel(1, 254)
+}
+Music(14, 100, 0)
+SetLabel(1, 254)
+ChangeUi(UI_CAM_PAN, 1)
+LoadMap(18, 1, 255)
+ChangeUi(UI_HUD, 1)
+SetFlag(FLAG_SYSTEM, ROOM_EXIT_ENABLED, 1)
+ChangeUi(UI_INVESTIGATE, 1)
+GotoLabel(1, 255)
+CheckCharacter(255)
+{
+}
+CheckObject(20)
+{
+	ChangeUi(UI_CAM_LOOK, 0)
+	ChangeUi(0, 1)
+	ChangeUi(UI_TEXTBOX, 1)
+	Speaker(CHR_MAKOTO)
+	TextboxFormat(4)
+	Text("<CLT 4>There's a TV...\n<CLT>")
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	TextboxFormat(4)
+	Text("<CLT 4>The school *is* funded by the national government,\nso I guess it's not that weird to have TVs in here...\n<CLT>")
+	WaitFrame()
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	TextboxFormat(4)
+	Text("<CLT 4>Something feels...off. I wonder what it is...\n<CLT>")
+	WaitFrame()
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	ChangeUi(UI_TEXTBOX, 0)
+}
+CheckObject(21)
+{
+	ChangeUi(UI_CAM_LOOK, 0)
+	ChangeUi(0, 1)
+	ChangeUi(UI_TEXTBOX, 1)
+	Speaker(CHR_MAKOTO)
+	TextboxFormat(4)
+	Text("<CLT 4>Is that...a surveillance camera?\n<CLT>")
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	TextboxFormat(4)
+	Text("<CLT 4>It's a dangerous world we live in. I guess they have\nthese to keep weirdos from just wandering in.\n<CLT>")
+	WaitFrame()
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	ChangeUi(UI_TEXTBOX, 0)
+	CheckFlagA(FLAG_MAP_INVESTIGATED, 2, NOT_EQUAL, 0)
+	If_FlagCheck()
+	{
+		GotoLabel(2, 0)
+	}
+	SetGameState(16, 1, 0, 1)
+	Animation(0, 14, 0, 0, 0, 0, 0, 0)
+	Sound(0, 100, 100)
+	Animation(0, 14, 0, 0, 0, 0, 0, 1)
+	Animation(0, 14, 0, 0, 0, 0, 0, 255)
+	SetFlag(FLAG_MAP_INVESTIGATED, 2, 1)
+	SetLabel(2, 0)
+}
+CheckObject(22)
+{
+	ChangeUi(UI_CAM_LOOK, 0)
+	ChangeUi(0, 1)
+	ChangeUi(UI_TEXTBOX, 1)
+	Speaker(CHR_MAKOTO)
+	TextboxFormat(4)
+	Text("<CLT 4>I can see the time from the clock but...\n<CLT>")
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	TextboxFormat(4)
+	Text("<CLT 4>Without being able to see outside,\it's hard to know where it's correct or not...\n<CLT>")
+	WaitFrame()
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	ChangeUi(UI_TEXTBOX, 0)
+}
+CheckObject(23)
+{
+	ChangeUi(UI_CAM_LOOK, 0)
+	ChangeUi(0, 1)
+	ChangeUi(UI_TEXTBOX, 1)
+	Speaker(CHR_MAKOTO)
+	TextboxFormat(4)
+	Text("<CLT 4>That's where you'd expect a window...\nInstead there's a giant steel plate nailed there...<CLT>")
+	WaitFrame()
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	ChangeUi(UI_TEXTBOX, 0)
+}
+CheckObject(24)
+{
+	ChangeUi(UI_CAM_LOOK, 0)
+	ChangeUi(0, 1)
+	ChangeUi(UI_TEXTBOX, 1)
+	Speaker(CHR_MAKOTO)
+	TextboxFormat(4)
+	Text("<CLT 4>That's where you'd expect a window...\nInstead there's a giant steel plate nailed there...\n<CLT>")
+	WaitFrame()
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	ChangeUi(UI_TEXTBOX, 0)
+}
+CheckObject(25)
+{
+	GotoLabel(0, 2)
+}
+CheckObject(254)
+{
+	SetLabel(0, 2)
+	ChangeUi(UI_NAME, 0)
+	ChangeUi(UI_TEXTBOX, 1)
+	ChangeUi(UI_CHOOSE_OPTION, 0)
+	ChangeUi(UI_CHOOSE_OPTION, 3)
+	GotoLabel(2, 1)
+	SetOption(1)
+	{
+		Text("Yes\n")
+		WaitFrame()
+		ChangeUi(UI_TEXTBOX, 0)
+		ChangeUi(UI_NAME, 1)
+		GotoLabel(0, 1)
+	}
+	SetOption(2)
+	{
+		Text("No\n")
+		WaitFrame()
+		ChangeUi(UI_TEXTBOX, 0)
+		ChangeUi(UI_NAME, 1)
+	}
+	SetOption(18)
+	{
+	}
+	SetOption(19)
+	{
+		Speaker(CHR_SYSTEM)
+		TextboxFormat(23)
+		Text("<CLT 23>Leave the area?\n<CLT>")
+		WaitFrame()
+		TextboxFormat(0)
+	}
+	SetOption(255)
+	{
+		SetLabel(2, 1)
+	}
+}
+CheckObject(255)
+{
+	SetLabel(1, 255)
+	SetLabel(0, 1)
+	SetGameState(8, 0, 0, 1)
+	Sound(0, 145, 100)
+	ScreenFade(101, COL_BLACK, 24)
+	LoadScript(10, 0, 18)
+	StopScript()
+	StopScript()
+}

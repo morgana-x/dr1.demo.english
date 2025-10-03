@@ -1,0 +1,139 @@
+﻿0x00(3, 0)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+If_FlagCheck()
+{
+	GotoLabel(1, 244)
+}
+LoadScript(10, 2, 16)
+StopScript()
+SetLabel(1, 244)
+ScreenFade(FADE_OUT, COL_BLACK_SPECIAL, 1)
+ChangeUi(UI_BG_MOVIE, 1)
+ChangeUi(UI_TEXTBOX_ONLY, 0)
+ChangeUi(UI_INVESTIGATE, 0)
+SetGameState(2, 0, 0, 100)
+SetGameState(3, 0, 0, 100)
+ChangeUi(UI_BG_BLACK, 0)
+LoadMap(16, 0, 255)
+ChangeUi(UI_BUSTUP, 0)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 0)
+If_FlagCheck()
+{
+	GotoLabel(1, 245)
+}
+Music(3, 100, 0)
+SetLabel(1, 245)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 1)
+If_FlagCheck()
+{
+	GotoLabel(1, 246)
+}
+Music(3, 100, 0)
+SetLabel(1, 246)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+If_FlagCheck()
+{
+	GotoLabel(1, 247)
+}
+Music(3, 100, 0)
+SetLabel(1, 247)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 3)
+If_FlagCheck()
+{
+	GotoLabel(1, 248)
+}
+Music(3, 100, 0)
+SetLabel(1, 248)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 4)
+If_FlagCheck()
+{
+	GotoLabel(1, 249)
+}
+Music(32, 100, 0)
+SetLabel(1, 249)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 5)
+If_FlagCheck()
+{
+	GotoLabel(1, 250)
+}
+Music(14, 100, 0)
+SetLabel(1, 250)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, AND)
+If_FlagCheck()
+{
+	GotoLabel(1, 251)
+}
+Music(14, 100, 0)
+SetLabel(1, 251)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, OR)
+If_FlagCheck()
+{
+	GotoLabel(1, 252)
+}
+Music(14, 100, 0)
+SetLabel(1, 252)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 8)
+If_FlagCheck()
+{
+	GotoLabel(1, 253)
+}
+Music(14, 100, 0)
+SetLabel(1, 253)
+ScreenFade(FADE_IN, COL_BLACK, 24)
+LoadMap(18, 1, 255)
+ChangeUi(UI_HUD, 1)
+SetFlag(FLAG_SYSTEM, ROOM_EXIT_ENABLED, 1)
+ChangeUi(UI_INVESTIGATE, 1)
+GotoLabel(1, 254)
+CheckCharacter(255)
+{
+}
+CheckObject(254)
+{
+	ChangeUi(UI_NAME, 0)
+	ChangeUi(UI_TEXTBOX, 1)
+	ChangeUi(UI_CHOOSE_OPTION, 0)
+	ChangeUi(UI_CHOOSE_OPTION, 3)
+	GotoLabel(1, 255)
+	SetOption(1)
+	{
+		Text("Yes\n")
+		WaitFrame()
+		ChangeUi(UI_TEXTBOX, 0)
+		ChangeUi(UI_NAME, 1)
+		GotoLabel(0, 1)
+	}
+	SetOption(2)
+	{
+		Text("No\n")
+		WaitFrame()
+		ChangeUi(UI_TEXTBOX, 0)
+		ChangeUi(UI_NAME, 1)
+	}
+	SetOption(18)
+	{
+	}
+	SetOption(19)
+	{
+		Speaker(CHR_SYSTEM)
+		TextboxFormat(23)
+		Text("<CLT 23>Leave the area?\n<CLT>")
+		WaitFrame()
+		TextboxFormat(0)
+	}
+	SetOption(255)
+	{
+		SetLabel(1, 255)
+	}
+}
+CheckObject(255)
+{
+	SetLabel(1, 254)
+	SetLabel(0, 1)
+	SetGameState(8, 0, 0, 7)
+	Sound(0, 145, 100)
+	ScreenFade(101, COL_BLACK, 24)
+	LoadScript(10, 0, 18)
+	StopScript()
+	StopScript()
+}

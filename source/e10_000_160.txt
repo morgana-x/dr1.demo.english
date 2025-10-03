@@ -1,0 +1,203 @@
+﻿0x00(1, 0)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+If_FlagCheck()
+{
+	GotoLabel(1, 244)
+}
+LoadScript(10, 2, 160)
+StopScript()
+SetLabel(1, 244)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 4)
+If_FlagCheck()
+{
+	GotoLabel(1, 245)
+}
+LoadScript(10, 4, 160)
+StopScript()
+SetLabel(1, 245)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, AND)
+If_FlagCheck()
+{
+	GotoLabel(1, 246)
+}
+LoadScript(10, 6, 160)
+StopScript()
+SetLabel(1, 246)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 8)
+If_FlagCheck()
+{
+	GotoLabel(1, 247)
+}
+LoadScript(10, 8, 160)
+StopScript()
+SetLabel(1, 247)
+ScreenFade(FADE_OUT, COL_BLACK_SPECIAL, 1)
+ChangeUi(UI_BG_MOVIE, 1)
+ChangeUi(UI_TEXTBOX_ONLY, 0)
+ChangeUi(UI_INVESTIGATE, 0)
+SetGameState(2, 0, 0, 100)
+SetGameState(3, 0, 0, 100)
+LoadSprite(18, 29, 1)
+LoadSprite(160, 29, 1)
+ChangeUi(UI_BG_BLACK, 0)
+LoadMap(160, 0, 255)
+ChangeUi(UI_BUSTUP, 0)
+ObjectState(23, 0, 0, 0, 0)
+ObjectState(24, 0, 0, 0, 0)
+ObjectState(26, 0, 0, 0, 0)
+ObjectState(27, 0, 0, 0, 0)
+ObjectState(29, 0, 0, 0, 0)
+ObjectState(30, 0, 0, 0, 0)
+ObjectState(31, 0, 0, 0, 0)
+ObjectState(32, 0, 0, 0, 0)
+ObjectState(33, 0, 0, 0, 0)
+ObjectState(34, 0, 0, 0, 0)
+ObjectState(35, 0, 0, 0, 0)
+ObjectState(36, 0, 0, 0, 0)
+ObjectState(37, 0, 0, 0, 0)
+ObjectState(38, 0, 0, 0, 0)
+ObjectState(39, 0, 0, 0, 0)
+ObjectState(40, 0, 0, 0, 0)
+ObjectState(41, 0, 0, 0, 0)
+ObjectState(42, 0, 0, 0, 0)
+ObjectState(43, 0, 0, 0, 0)
+ObjectState(44, 0, 0, 0, 0)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 0)
+If_FlagCheck()
+{
+	GotoLabel(1, 248)
+}
+Music(3, 100, 0)
+SetLabel(1, 248)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 1)
+If_FlagCheck()
+{
+	GotoLabel(1, 249)
+}
+Music(3, 100, 0)
+SetLabel(1, 249)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+If_FlagCheck()
+{
+	GotoLabel(1, 250)
+}
+Music(3, 100, 0)
+SetLabel(1, 250)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 3)
+If_FlagCheck()
+{
+	GotoLabel(1, 251)
+}
+Music(3, 100, 0)
+SetLabel(1, 251)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 4)
+If_FlagCheck()
+{
+	GotoLabel(1, 252)
+}
+Music(32, 100, 0)
+SetLabel(1, 252)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 5)
+If_FlagCheck()
+{
+	GotoLabel(1, 253)
+}
+Music(14, 100, 0)
+SetLabel(1, 253)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, AND)
+If_FlagCheck()
+{
+	GotoLabel(1, 254)
+}
+Music(14, 100, 0)
+SetLabel(1, 254)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, OR)
+If_FlagCheck()
+{
+	GotoLabel(1, 255)
+}
+Music(14, 100, 0)
+SetLabel(1, 255)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 8)
+If_FlagCheck()
+{
+	GotoLabel(2, 0)
+}
+Music(14, 100, 0)
+SetLabel(2, 0)
+ScreenFade(FADE_IN, COL_BLACK, 24)
+ChangeUi(UI_HUD, 1)
+SetFlag(FLAG_SYSTEM, ROOM_EXIT_ENABLED, 0)
+ChangeUi(UI_INVESTIGATE, 1)
+GotoLabel(2, 1)
+CheckCharacter(255)
+{
+}
+CheckObject(20)
+{
+	LoadMap(18, 1, 255)
+	SetGameState(8, 0, 0, 0)
+	ChangeUi(UI_CAM_LOOK, 1)
+	Sound(0, 145, 100)
+	LoadScript(10, 0, 18)
+	StopScript()
+}
+CheckObject(21)
+{
+	LoadMap(140, 1, 255)
+	SetGameState(8, 0, 0, 0)
+	ChangeUi(UI_CAM_LOOK, 1)
+	Sound(0, 145, 100)
+	LoadScript(10, 0, 140)
+	StopScript()
+}
+CheckObject(22)
+{
+	LoadMap(135, 1, 255)
+	SetGameState(8, 0, 0, 0)
+	ChangeUi(UI_CAM_LOOK, 1)
+	Sound(0, 141, 100)
+	LoadScript(10, 0, 135)
+	StopScript()
+}
+CheckObject(25)
+{
+	LoadMap(146, 1, 255)
+	SetGameState(8, 0, 0, 0)
+	ChangeUi(UI_CAM_LOOK, 1)
+	Sound(0, 145, 100)
+	LoadScript(10, 0, 146)
+	StopScript()
+}
+CheckObject(28)
+{
+	CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 4)
+	If_FlagCheck()
+	{
+		GotoLabel(2, 2)
+	}
+	LoadMap(244, 1, 255)
+	SetGameState(8, 0, 0, 0)
+	ChangeUi(UI_CAM_LOOK, 1)
+	Sound(0, 145, 100)
+	LoadScript(10, 0, 104)
+	StopScript()
+	SetLabel(2, 2)
+	ChangeUi(UI_CAM_LOOK, 0)
+	ChangeUi(0, 1)
+	ChangeUi(UI_TEXTBOX, 1)
+	Speaker(CHR_MAKOTO)
+	TextboxFormat(4)
+	Text("<CLT 4>Here's my room.\nI have no choice but to return right now...\n<CLT>")
+	WaitFrame()
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	ChangeUi(UI_TEXTBOX, 0)
+}
+CheckObject(255)
+{
+	SetLabel(2, 1)
+	StopScript()
+	StopScript()
+}
