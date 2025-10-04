@@ -1,0 +1,68 @@
+﻿0x00(3, 0)
+ScreenFade(FADE_OUT, COL_BLACK_SPECIAL, 1)
+ChangeUi(UI_BG_MOVIE, 1)
+ChangeUi(UI_TEXTBOX_ONLY, 0)
+ChangeUi(UI_INVESTIGATE, 0)
+SetGameState(2, 0, 0, 100)
+SetGameState(3, 0, 0, 100)
+ChangeUi(UI_BG_BLACK, 0)
+LoadMap(16, 0, 255)
+ChangeUi(UI_BUSTUP, 0)
+ScreenFade(FADE_IN, COL_BLACK, 24)
+LoadMap(18, 1, 255)
+ChangeUi(UI_HUD, 1)
+SetFlag(FLAG_SYSTEM, ROOM_EXIT_ENABLED, 1)
+ChangeUi(UI_INVESTIGATE, 1)
+GotoLabel(1, 244)
+CheckCharacter(255)
+{
+}
+CheckObject(254)
+{
+	ChangeUi(UI_NAME, 0)
+	ChangeUi(UI_TEXTBOX, 1)
+	ChangeUi(UI_CHOOSE_OPTION, 0)
+	ChangeUi(UI_CHOOSE_OPTION, 3)
+	GotoLabel(1, 245)
+	SetOption(1)
+	{
+		Text("はい\n")
+		WaitFrame()
+		ChangeUi(UI_TEXTBOX, 0)
+		ChangeUi(UI_NAME, 1)
+		GotoLabel(0, 2)
+	}
+	SetOption(2)
+	{
+		Text("いいえ\n")
+		WaitFrame()
+		ChangeUi(UI_TEXTBOX, 0)
+		ChangeUi(UI_NAME, 1)
+	}
+	SetOption(18)
+	{
+	}
+	SetOption(19)
+	{
+		Speaker(CHR_SYSTEM)
+		TextboxFormat(23)
+		Text("<CLT 23>外に出ますか？\n<CLT>")
+		WaitFrame()
+		TextboxFormat(0)
+	}
+	SetOption(255)
+	{
+		SetLabel(1, 245)
+	}
+}
+CheckObject(255)
+{
+	SetLabel(1, 244)
+	SetLabel(0, 2)
+	SetGameState(8, 0, 0, 7)
+	Sound(0, 145, 100)
+	ScreenFade(101, COL_BLACK, 24)
+	LoadScript(10, 0, 18)
+	StopScript()
+	StopScript()
+}

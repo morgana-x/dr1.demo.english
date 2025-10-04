@@ -1,0 +1,38 @@
+﻿0x00(0, 0)
+ChangeUi(UI_BUSTUP, 0)
+Sprite(1, CHR_KIYOTAKA, 0, SPRITE_3D, CAM_FARLEFT)
+Sprite(4, CHR_LEON, 0, SPRITE_3D, CAM_FARLEFT)
+Sprite(5, CHR_HIFUMI, 0, SPRITE_3D, CAM_FARLEFT)
+Sprite(7, CHR_MAIZONO, 0, SPRITE_3D, CAM_FARLEFT)
+Sprite(10, CHR_TOUKO, 0, SPRITE_3D, CAM_FARLEFT)
+Sprite(0, CHR_MAKOTO, 0, SPRITE_3D, CAM_FARLEFT)
+SetLabel(0, 20)
+Music(25, 100, 0)
+ChangeUi(32, 101)
+GotoLabel(1, 244)
+SetOption(1)
+{
+	GotoLabel(0, 0)
+}
+SetOption(2)
+{
+	GotoLabel(0, 1)
+}
+SetOption(3)
+{
+	GotoLabel(0, 2)
+}
+SetOption(255)
+{
+	SetLabel(1, 244)
+	SetLabel(0, 0)
+	LoadScript(10, 109, 0)
+	StopScript()
+	SetLabel(0, 1)
+	RunScript(10, 199, 0)
+	GotoLabel(0, 20)
+	SetLabel(0, 2)
+	RunScript(10, 198, 0)
+	GotoLabel(0, 20)
+	StopScript()
+}

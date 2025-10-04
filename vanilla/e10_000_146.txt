@@ -1,0 +1,175 @@
+﻿0x00(6, 0)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+If_FlagCheck()
+{
+	GotoLabel(1, 244)
+}
+LoadScript(10, 2, 146)
+StopScript()
+SetLabel(1, 244)
+ScreenFade(FADE_OUT, COL_BLACK_SPECIAL, 1)
+ChangeUi(UI_BG_MOVIE, 1)
+ChangeUi(UI_TEXTBOX_ONLY, 0)
+ChangeUi(UI_INVESTIGATE, 0)
+SetGameState(2, 0, 0, 100)
+SetGameState(3, 0, 0, 100)
+ChangeUi(UI_BG_BLACK, 0)
+LoadMap(146, 0, 255)
+ChangeUi(UI_BUSTUP, 0)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 0)
+If_FlagCheck()
+{
+	GotoLabel(1, 245)
+}
+Music(3, 100, 0)
+SetLabel(1, 245)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 1)
+If_FlagCheck()
+{
+	GotoLabel(1, 246)
+}
+Music(3, 100, 0)
+SetLabel(1, 246)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+If_FlagCheck()
+{
+	GotoLabel(1, 247)
+}
+Music(3, 100, 0)
+SetLabel(1, 247)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 3)
+If_FlagCheck()
+{
+	GotoLabel(1, 248)
+}
+Music(3, 100, 0)
+SetLabel(1, 248)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 4)
+If_FlagCheck()
+{
+	GotoLabel(1, 249)
+}
+Music(32, 100, 0)
+SetLabel(1, 249)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 5)
+If_FlagCheck()
+{
+	GotoLabel(1, 250)
+}
+Music(14, 100, 0)
+SetLabel(1, 250)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, AND)
+If_FlagCheck()
+{
+	GotoLabel(1, 251)
+}
+Music(14, 100, 0)
+SetLabel(1, 251)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, OR)
+If_FlagCheck()
+{
+	GotoLabel(1, 252)
+}
+Music(14, 100, 0)
+SetLabel(1, 252)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 8)
+If_FlagCheck()
+{
+	GotoLabel(1, 253)
+}
+Music(14, 100, 0)
+SetLabel(1, 253)
+ScreenFade(FADE_IN, COL_BLACK, 24)
+LoadMap(160, 1, 255)
+ChangeUi(UI_HUD, 1)
+SetFlag(FLAG_SYSTEM, ROOM_EXIT_ENABLED, 1)
+ChangeUi(UI_INVESTIGATE, 1)
+GotoLabel(1, 254)
+CheckCharacter(255)
+{
+}
+CheckObject(20)
+{
+	ChangeUi(UI_CAM_LOOK, 0)
+	ChangeUi(0, 1)
+	ChangeUi(UI_TEXTBOX, 1)
+	Speaker(CHR_MAKOTO)
+	TextboxFormat(4)
+	Text("<CLT 4>水槽がある…\n<CLT>")
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	TextboxFormat(4)
+	Text("<CLT 4>………………\n<CLT>")
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	TextboxFormat(4)
+	Text("<CLT 4>なんだろう…\n何か異様な雰囲気を感じる。\n<CLT>")
+	WaitFrame()
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	ChangeUi(UI_TEXTBOX, 0)
+	CheckFlagA(FLAG_MAP_INVESTIGATED, 9, NOT_EQUAL, 0)
+	If_FlagCheck()
+	{
+		GotoLabel(1, 255)
+	}
+	SetGameState(16, 1, 0, 1)
+	Animation(0, 14, 0, 0, 0, 0, 0, 0)
+	Sound(0, 100, 100)
+	Animation(0, 14, 0, 0, 0, 0, 0, 1)
+	Animation(0, 14, 0, 0, 0, 0, 0, 255)
+	SetFlag(FLAG_MAP_INVESTIGATED, 9, 1)
+	SetLabel(1, 255)
+}
+CheckObject(254)
+{
+	ChangeUi(UI_NAME, 0)
+	ChangeUi(UI_TEXTBOX, 1)
+	ChangeUi(UI_CHOOSE_OPTION, 0)
+	ChangeUi(UI_CHOOSE_OPTION, 3)
+	GotoLabel(2, 0)
+	SetOption(1)
+	{
+		Text("はい\n")
+		WaitFrame()
+		ChangeUi(UI_TEXTBOX, 0)
+		ChangeUi(UI_NAME, 1)
+		GotoLabel(0, 1)
+	}
+	SetOption(2)
+	{
+		Text("いいえ\n")
+		WaitFrame()
+		ChangeUi(UI_TEXTBOX, 0)
+		ChangeUi(UI_NAME, 1)
+	}
+	SetOption(18)
+	{
+	}
+	SetOption(19)
+	{
+		Speaker(CHR_SYSTEM)
+		TextboxFormat(23)
+		Text("<CLT 23>外に出ますか？\n<CLT>")
+		WaitFrame()
+		TextboxFormat(0)
+	}
+	SetOption(255)
+	{
+		SetLabel(2, 0)
+	}
+}
+CheckObject(255)
+{
+	SetLabel(1, 254)
+	SetLabel(0, 1)
+	SetGameState(8, 0, 0, 5)
+	Sound(0, 145, 100)
+	ScreenFade(101, COL_BLACK, 24)
+	LoadScript(10, 0, 160)
+	StopScript()
+	StopScript()
+}

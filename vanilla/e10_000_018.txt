@@ -1,0 +1,206 @@
+﻿0x00(4, 0)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+If_FlagCheck()
+{
+	GotoLabel(1, 244)
+}
+LoadScript(10, 2, 18)
+StopScript()
+SetLabel(1, 244)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 4)
+If_FlagCheck()
+{
+	GotoLabel(1, 245)
+}
+LoadScript(10, 4, 18)
+StopScript()
+SetLabel(1, 245)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 8)
+If_FlagCheck()
+{
+	GotoLabel(1, 246)
+}
+LoadScript(10, 8, 18)
+StopScript()
+SetLabel(1, 246)
+ScreenFade(FADE_OUT, COL_BLACK_SPECIAL, 1)
+ChangeUi(UI_BG_MOVIE, 1)
+ChangeUi(UI_TEXTBOX_ONLY, 0)
+ChangeUi(UI_INVESTIGATE, 0)
+SetGameState(2, 0, 0, 100)
+SetGameState(3, 0, 0, 100)
+LoadSprite(18, 29, 1)
+LoadSprite(160, 29, 1)
+ChangeUi(UI_BG_BLACK, 0)
+LoadMap(18, 0, 255)
+ChangeUi(UI_BUSTUP, 0)
+ObjectState(25, 0, 0, 0, 0)
+ObjectState(26, 0, 0, 0, 0)
+ObjectState(28, 0, 0, 0, 0)
+ObjectState(29, 0, 0, 0, 0)
+ObjectState(31, 0, 0, 0, 0)
+ObjectState(32, 0, 0, 0, 0)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 0)
+If_FlagCheck()
+{
+	GotoLabel(1, 247)
+}
+Music(3, 100, 0)
+SetLabel(1, 247)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 1)
+If_FlagCheck()
+{
+	GotoLabel(1, 248)
+}
+Music(3, 100, 0)
+SetLabel(1, 248)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+If_FlagCheck()
+{
+	GotoLabel(1, 249)
+}
+Music(3, 100, 0)
+SetLabel(1, 249)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 3)
+If_FlagCheck()
+{
+	GotoLabel(1, 250)
+}
+Music(3, 100, 0)
+SetLabel(1, 250)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 4)
+If_FlagCheck()
+{
+	GotoLabel(1, 251)
+}
+Music(32, 100, 0)
+SetLabel(1, 251)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 5)
+If_FlagCheck()
+{
+	GotoLabel(1, 252)
+}
+Music(14, 100, 0)
+SetLabel(1, 252)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, AND)
+If_FlagCheck()
+{
+	GotoLabel(1, 253)
+}
+Music(14, 100, 0)
+SetLabel(1, 253)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, OR)
+If_FlagCheck()
+{
+	GotoLabel(1, 254)
+}
+Music(14, 100, 0)
+SetLabel(1, 254)
+CheckFlagB(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 8)
+If_FlagCheck()
+{
+	GotoLabel(1, 255)
+}
+Music(14, 100, 0)
+SetLabel(1, 255)
+ScreenFade(FADE_IN, COL_BLACK, 24)
+ChangeUi(UI_HUD, 1)
+SetFlag(FLAG_SYSTEM, ROOM_EXIT_ENABLED, 0)
+ChangeUi(UI_INVESTIGATE, 1)
+GotoLabel(2, 0)
+CheckCharacter(255)
+{
+}
+CheckObject(20)
+{
+	LoadMap(160, 1, 255)
+	SetGameState(8, 0, 0, 0)
+	ChangeUi(UI_CAM_LOOK, 1)
+	Sound(0, 141, 100)
+	LoadScript(10, 0, 160)
+	StopScript()
+}
+CheckObject(21)
+{
+	LoadMap(15, 1, 255)
+	SetGameState(8, 0, 0, 0)
+	ChangeUi(UI_CAM_LOOK, 1)
+	Sound(0, 145, 100)
+	LoadScript(10, 0, 15)
+	StopScript()
+}
+CheckObject(22)
+{
+	LoadMap(14, 1, 255)
+	SetGameState(8, 0, 0, 0)
+	ChangeUi(UI_CAM_LOOK, 1)
+	Sound(0, 145, 100)
+	LoadScript(10, 0, 14)
+	StopScript()
+}
+CheckObject(23)
+{
+	ChangeUi(UI_CAM_LOOK, 0)
+	ChangeUi(UI_NAME, 0)
+	ChangeUi(UI_TEXTBOX, 1)
+	Sound(0, 153, 100)
+	Speaker(CHR_SYSTEM)
+	TextboxFormat(23)
+	Text("<CLT 23>「ガタガタガタ！」\n<CLT>")
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	ChangeUi(UI_NAME, 1)
+	ChangeUi(0, 0)
+	Speaker(CHR_MAKOTO)
+	Text("開かない…\n鍵が掛かってるみたいだ…\n")
+	WaitFrame()
+	WaitFrame()
+	WaitInput()
+	ChangeUi(UI_TEXTBOX, 0)
+}
+CheckObject(24)
+{
+	LoadMap(9, 1, 255)
+	SetGameState(8, 0, 0, 0)
+	ChangeUi(UI_CAM_LOOK, 1)
+	Sound(0, 145, 100)
+	LoadScript(10, 0, 9)
+	StopScript()
+}
+CheckObject(27)
+{
+	LoadMap(16, 1, 255)
+	SetGameState(8, 0, 0, 0)
+	ChangeUi(UI_CAM_LOOK, 1)
+	Sound(0, 145, 100)
+	LoadScript(10, 0, 16)
+	StopScript()
+}
+CheckObject(30)
+{
+	ChangeUi(UI_CAM_LOOK, 0)
+	ChangeUi(UI_NAME, 0)
+	ChangeUi(UI_TEXTBOX, 1)
+	Sound(0, 153, 100)
+	Speaker(CHR_SYSTEM)
+	TextboxFormat(23)
+	Text("<CLT 23>「ガタガタガタ！」\n<CLT>")
+	WaitFrame()
+	TextboxFormat(0)
+	WaitInput()
+	ChangeUi(UI_NAME, 1)
+	ChangeUi(0, 0)
+	Speaker(CHR_MAKOTO)
+	Text("開かない…\n鍵が掛かってるみたいだ…\n")
+	WaitFrame()
+	WaitFrame()
+	WaitInput()
+	ChangeUi(UI_TEXTBOX, 0)
+}
+CheckObject(255)
+{
+	SetLabel(2, 0)
+	StopScript()
+	StopScript()
+}

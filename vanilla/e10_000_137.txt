@@ -1,0 +1,4 @@
+﻿0x00(17, 0)
+CheckFlagA(FLAG_SYSTEM, 20, NOT_EQUAL, 0, 2)
+WaitInput()
+SetGameState(1, 244, 112, 24)
