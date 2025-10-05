@@ -1,4 +1,4 @@
-﻿0x00(15, 0)
+﻿0x00(16, 0)
 SetLabel(0, 20)
 SetGameState(9, 0, 0, 0)
 SetFlag(FLAG_SYSTEM, 10, 0)

@@ -31,9 +31,9 @@ SectionCount | 30
 	Sprite | 7
 	Camera | 221
 	Portrait Shake / Camera 2 | 1
-	Voice | -1
+	Voice | 1
 	Time Bonus | 10
-	Chapter | 1
+	Chapter | 10
 	Vertical Characters | 0
 	Position | 0
 ////////////////////////////////////////
@@ -64,9 +64,9 @@ SectionCount | 30
 	Sprite | 9
 	Camera | 158
 	Portrait Shake / Camera 2 | 0
-	Voice | -1
+	Voice | 1
 	Time Bonus | 10
-	Chapter | 1
+	Chapter | 10
 	Vertical Characters | 0
 	Position | 0
 ////////////////////////////////////////

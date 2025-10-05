@@ -4,7 +4,7 @@ ChangeUi(22, 1)
 GotoLabel(1, 244)
 CameraShake(0, 0)
 Sprite(1, CHR_KIYOTAKA, 7, SPRITE_3D, CAM_FARLEFT)
-// Voice(CHR_KIYOTAKA, 10, 0, 1, 100) // TODO: Verify if voice file in game and if causes crash
+Voice(CHR_KIYOTAKA, 10, 0, 1, 100) // TODO: Verify if voice file in game and if causes crash
 Text("I assert that the one who was\nmurdered was Mr Yasuhiro Hagakure!\n")
 WaitFrame()
 TextboxFormat(9)
@@ -12,7 +12,7 @@ TextboxFormat(0)
 WaitFrame()
 CameraShake(0, 1)
 Sprite(7, CHR_MAIZONO, 9, SPRITE_3D, CAM_FARLEFT)
-// Voice(CHR_MAIZONO, 10, 0, 1, 100) // さすがに、それ位わかります…
+Voice(CHR_MAIZONO, 10, 0, 1, 100) // さすがに、それ位わかります…
 Text("I think, we already know that...\n")
 WaitFrame()
 CameraShake(0, 2)
