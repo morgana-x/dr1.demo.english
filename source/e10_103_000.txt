@@ -256,8 +256,8 @@ SetOption(19)
 {
 	Sprite(0, CHR_MAKOTO, 5, SPRITE_3D, CAM_FARLEFT)
 	TrialCamera(0, 0, 20)
-	TextboxFormat(4)
-	Text("<CLT 4>あの部屋で争ったと思われる人物…\nそれは、もちろん…\n<CLT>")
+	TextboxFormat(4) //  あの部屋で争ったと思われる人物…\nそれは、もちろん…
+	Text("<CLT 4>The people who had a fight in that room...\nOf course that's...\n<CLT>")
 	WaitFrame()
 	WaitFrame()
 	TextboxFormat(0)
