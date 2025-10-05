@@ -14,7 +14,7 @@
   "CanUnload": null,
   "HasExports": null,
   "IsLibrary": false,
-  "ReleaseMetadataFileName": "dr1.script.demo.ReleaseMetadata.json",
+  "ReleaseMetadataFileName": "dr1.script.demoenglish.ReleaseMetadata.json",
   "PluginData": {
     "GitHubDependencies": {
       "IdToConfigMap": {
@@ -46,6 +46,10 @@
           "ReleaseMetadataName": "Sewer56.Update.ReleaseMetadata.json"
         }
       }
+    },
+    "GameBanana": {
+      "ItemType": "Mod",
+      "ItemId": 499843
     }
   },
   "IsUniversalMod": false,

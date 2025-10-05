@@ -1,0 +1,236 @@
+////////////////////////////////////////
+// Metadata
+////////////////////////////////////////
+BinHeader | 300
+SectionCount | 30
+////////////////////////////////////////
+// Section 1
+////////////////////////////////////////
+	TextID | 0
+	Type | 0
+	Slashes | 0
+	Shoot with Evidence | -1
+	Shoot with Argue Point | -1
+	Early Advance Frame | 2000
+	Has Weak Point | 0
+	Advance | 270
+	0x8 | 0
+	Entry Effect | 0
+	Exit Effect | 0
+	Fade Out | 270
+	Horizontal | 240
+	Vertical | 180
+	Angle Acceleration | 0
+	Angle | 0
+	Initial Scale | 90
+	Final Scale | 110
+	Text Shake | 1
+	Rotation | 0
+	Rotation Speed | 0
+	Character | 1
+	Sprite | 7
+	Camera | 221
+	Portrait Shake / Camera 2 | 1
+	Voice | -1
+	Time Bonus | 10
+	Chapter | 1
+	Vertical Characters | 0
+	Position | 0
+////////////////////////////////////////
+// Section 2
+////////////////////////////////////////
+	TextID | 1
+	Type | 0
+	Slashes | 0
+	Shoot with Evidence | -1
+	Shoot with Argue Point | -1
+	Early Advance Frame | 2000
+	Has Weak Point | 0
+	Advance | 160
+	0x8 | 0
+	Entry Effect | 0
+	Exit Effect | 0
+	Fade Out | 160
+	Horizontal | 280
+	Vertical | 170
+	Angle Acceleration | 15
+	Angle | 270
+	Initial Scale | 110
+	Final Scale | 100
+	Text Shake | 0
+	Rotation | 0
+	Rotation Speed | 0
+	Character | 7
+	Sprite | 9
+	Camera | 158
+	Portrait Shake / Camera 2 | 0
+	Voice | -1
+	Time Bonus | 10
+	Chapter | 1
+	Vertical Characters | 0
+	Position | 0
+////////////////////////////////////////
+// Section 3
+////////////////////////////////////////
+	TextID | 2
+	Type | 0
+	Slashes | 0
+	Shoot with Evidence | -1
+	Shoot with Argue Point | -1
+	Early Advance Frame | 2000
+	Has Weak Point | 0
+	Advance | 210
+	0x8 | 0
+	Entry Effect | 0
+	Exit Effect | 0
+	Fade Out | 210
+	Horizontal | 140
+	Vertical | 160
+	Angle Acceleration | 15
+	Angle | 90
+	Initial Scale | 100
+	Final Scale | 100
+	Text Shake | 0
+	Rotation | 0
+	Rotation Speed | 0
+	Character | 2
+	Sprite | 8
+	Camera | 191
+	Portrait Shake / Camera 2 | 0
+	Voice | 1
+	Time Bonus | 10
+	Chapter | 1
+	Vertical Characters | 0
+	Position | 0
+////////////////////////////////////////
+// Section 4
+////////////////////////////////////////
+	TextID | 3
+	Type | 0
+	Slashes | 0
+	Shoot with Evidence | -1
+	Shoot with Argue Point | -1
+	Early Advance Frame | 2000
+	Has Weak Point | 0
+	Advance | 160
+	0x8 | 0
+	Entry Effect | 0
+	Exit Effect | 0
+	Fade Out | 160
+	Horizontal | 290
+	Vertical | 140
+	Angle Acceleration | 10
+	Angle | 180
+	Initial Scale | 110
+	Final Scale | 100
+	Text Shake | 0
+	Rotation | 0
+	Rotation Speed | 0
+	Character | 9
+	Sprite | 8
+	Camera | 197
+	Portrait Shake / Camera 2 | 0
+	Voice | 1
+	Time Bonus | 10
+	Chapter | 1
+	Vertical Characters | 0
+	Position | 0
+////////////////////////////////////////
+// Section 5
+////////////////////////////////////////
+	TextID | 4
+	Type | 0
+	Slashes | 0
+	Shoot with Evidence | -1
+	Shoot with Argue Point | -1
+	Early Advance Frame | 2000
+	Has Weak Point | 0
+	Advance | 160
+	0x8 | 0
+	Entry Effect | 0
+	Exit Effect | 0
+	Fade Out | 160
+	Horizontal | 220
+	Vertical | 60
+	Angle Acceleration | 0
+	Angle | 0
+	Initial Scale | 110
+	Final Scale | 105
+	Text Shake | 0
+	Rotation | 0
+	Rotation Speed | 0
+	Character | 14
+	Sprite | 12
+	Camera | 160
+	Portrait Shake / Camera 2 | 0
+	Voice | 1
+	Time Bonus | 10
+	Chapter | 1
+	Vertical Characters | 0
+	Position | 0
+////////////////////////////////////////
+// Section 6
+////////////////////////////////////////
+	TextID | 5
+	Type | 0
+	Slashes | 0
+	Shoot with Evidence | -1
+	Shoot with Argue Point | -1
+	Early Advance Frame | 2000
+	Has Weak Point | 0
+	Advance | 260
+	0x8 | 0
+	Entry Effect | 0
+	Exit Effect | 0
+	Fade Out | 260
+	Horizontal | 220
+	Vertical | 120
+	Angle Acceleration | 0
+	Angle | 0
+	Initial Scale | 90
+	Final Scale | 105
+	Text Shake | 0
+	Rotation | 0
+	Rotation Speed | 0
+	Character | 14
+	Sprite | 0
+	Camera | 183
+	Portrait Shake / Camera 2 | 0
+	Voice | 2
+	Time Bonus | 10
+	Chapter | 1
+	Vertical Characters | 0
+	Position | 0
+////////////////////////////////////////
+// Section 7
+////////////////////////////////////////
+	TextID | 6
+	Type | 0
+	Slashes | 0
+	Shoot with Evidence | 1
+	Shoot with Argue Point | -1
+	Early Advance Frame | 2000
+	Has Weak Point | 1
+	Advance | 220
+	0x8 | 0
+	Entry Effect | 0
+	Exit Effect | 0
+	Fade Out | 210
+	Horizontal | 220
+	Vertical | 190
+	Angle Acceleration | 0
+	Angle | 0
+	Initial Scale | 80
+	Final Scale | 105
+	Text Shake | 0
+	Rotation | 0
+	Rotation Speed | 0
+	Character | 14
+	Sprite | 7
+	Camera | 198
+	Portrait Shake / Camera 2 | 0
+	Voice | 3
+	Time Bonus | 10
+	Chapter | 1
+	Vertical Characters | 0
+	Position | 0
